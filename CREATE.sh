@@ -29,6 +29,13 @@ else
     sleep 2
 fi
 
+if [[ -z "$subnets" ]]; then
+    echo -e "${RED}OOPS! IT LOOKS LIKE THE subnets VARIABLE IS NOT SET."
+    echo -e "Please set the variable in ${SCRIPT_DIR}/scripts/defaults.sh and rerun this this script"
+    echo -e "Exiting...${NC}"
+    exit
+fi 
+
 echo "creating cluster ${cluster_name}" | tee -a $logfile 
 $SCRIPT_DIR/scripts/create_cluster.sh -c $cluster_name >> $logfile
 

@@ -17,7 +17,7 @@ export task_role_name="fargate_docker_exec"
 export image="python:3.11-slim"
 
 # NOTE: these are dummy subnet IDs. They MUST be replaced.
-export subnets="['subnet-0fc1775879',subnet-052ed748]"
+# export subnets="['subnet-0fc1775879',subnet-052ed748]" #EXAMPLE
 
 export security_groups="[]"
 
