@@ -38,3 +38,12 @@
 ```
 export subnets="['subnet-0fc1775879',subnet-052ed748]"
 ```
+
+## Exec into a container using AWS cli, for example:
+
+```
+aws ecs execute-command --cluster <CLUSTER_NAME> \
+--task <ECS_TASK_ID> \
+--container <TASK_CONTAINER_NAME> \
+--interactive --command "/bin/sh"
+```
